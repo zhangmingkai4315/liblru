@@ -1,9 +1,9 @@
 #### LRU实现及测试
 
 LRU实现有下面三种方式： 
-1. Hash+双链表的实现
-2. Hash+数组实现
-3. Hash+双链表+sync.Mutex实现的并发LRU
+1. Hash+双链表的实现【linklistlru】
+2. Hash+数组实现   【slicelru】
+3. Hash+双链表+sync.Mutex实现的并发LRU 【concurrentlru】
 
 相关的测试数据:
 
