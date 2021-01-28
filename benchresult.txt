@@ -1,0 +1,132 @@
+=== RUN   TestConcurrentSafeLRU
+--- PASS: TestConcurrentSafeLRU (0.00s)
+=== RUN   TestNewDoubleLinkList
+--- PASS: TestNewDoubleLinkList (0.00s)
+=== RUN   TestDoubleLinkList_Remove
+--- PASS: TestDoubleLinkList_Remove (0.00s)
+=== RUN   TestLinkListLRU
+--- PASS: TestLinkListLRU (0.00s)
+=== RUN   TestSliceLRU
+--- PASS: TestSliceLRU (0.00s)
+goos: darwin
+goarch: amd64
+pkg: github.com/zhangmingkai4315/liblru
+BenchmarkLRU_Set/slicelru-16-6         	 7242322	       168 ns/op	      80 B/op	       3 allocs/op
+BenchmarkLRU_Set/slicelru-32-6         	 5537265	       222 ns/op	      79 B/op	       3 allocs/op
+BenchmarkLRU_Set/slicelru-64-6         	 3702372	       333 ns/op	      79 B/op	       3 allocs/op
+BenchmarkLRU_Set/slicelru-128-6        	 2167615	       549 ns/op	      79 B/op	       3 allocs/op
+BenchmarkLRU_Set/slicelru-256-6        	 1225981	       984 ns/op	      79 B/op	       3 allocs/op
+BenchmarkLRU_Set/slicelru-512-6        	  650452	      1861 ns/op	      79 B/op	       3 allocs/op
+BenchmarkLRU_Set/slicelru-1024-6       	  372967	      3602 ns/op	      79 B/op	       3 allocs/op
+BenchmarkLRU_Set/slicelru-2048-6       	  198013	      7248 ns/op	     103 B/op	       3 allocs/op
+BenchmarkLRU_Set/slicelru-4096-6       	  111669	     14557 ns/op	     103 B/op	       3 allocs/op
+BenchmarkLRU_Set/slicelru-8192-6       	   78105	     27934 ns/op	     103 B/op	       2 allocs/op
+BenchmarkLRU_Set/slicelru-16384-6      	   76904	     45482 ns/op	      99 B/op	       2 allocs/op
+BenchmarkLRU_Set/slicelru-32768-6      	   77810	     82745 ns/op	      98 B/op	       2 allocs/op
+BenchmarkLRU_Set/slicelru-65536-6      	   59710	     90504 ns/op	      96 B/op	       2 allocs/op
+BenchmarkLRU_Set/linklistlru-16-6      	 5874750	       203 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/linklistlru-32-6      	 5850553	       206 ns/op	      66 B/op	       3 allocs/op
+BenchmarkLRU_Set/linklistlru-64-6      	 5811062	       207 ns/op	      66 B/op	       3 allocs/op
+BenchmarkLRU_Set/linklistlru-128-6     	 5804197	       212 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/linklistlru-256-6     	 5639049	       214 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/linklistlru-512-6     	 5562681	       219 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/linklistlru-1024-6    	 5493770	       219 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/linklistlru-2048-6    	 5396746	       224 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/linklistlru-4096-6    	 5079134	       240 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/linklistlru-8192-6    	 4744225	       248 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/linklistlru-16384-6   	 4716069	       259 ns/op	      64 B/op	       3 allocs/op
+BenchmarkLRU_Set/linklistlru-32768-6   	 4651280	       265 ns/op	      64 B/op	       3 allocs/op
+BenchmarkLRU_Set/linklistlru-65536-6   	 4248658	       289 ns/op	      64 B/op	       3 allocs/op
+BenchmarkLRU_Set/concurrentlru-16-6    	 4968891	       243 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/concurrentlru-32-6    	 4927071	       245 ns/op	      66 B/op	       3 allocs/op
+BenchmarkLRU_Set/concurrentlru-64-6    	 4884494	       249 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/concurrentlru-128-6   	 4885410	       248 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/concurrentlru-256-6   	 4847872	       253 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/concurrentlru-512-6   	 4743471	       256 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/concurrentlru-1024-6  	 4690080	       256 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/concurrentlru-2048-6  	 4588356	       261 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/concurrentlru-4096-6  	 4476319	       271 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/concurrentlru-8192-6  	 4230949	       288 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/concurrentlru-16384-6 	 4091266	       302 ns/op	      65 B/op	       3 allocs/op
+BenchmarkLRU_Set/concurrentlru-32768-6 	 3916704	       304 ns/op	      64 B/op	       3 allocs/op
+BenchmarkLRU_Set/concurrentlru-65536-6 	 3954196	       334 ns/op	      64 B/op	       3 allocs/op
+BenchmarkLRU_GetInLRU/slicelru-16-6    	42625429	        28.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/slicelru-32-6    	39599884	        31.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/slicelru-64-6    	38564259	        32.2 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/slicelru-128-6   	27548200	        40.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/slicelru-256-6   	20604517	        59.7 ns/op	       1 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/slicelru-512-6   	14357026	        81.8 ns/op	       2 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/slicelru-1024-6  	10523378	       117 ns/op	       2 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/slicelru-2048-6  	 6286096	       193 ns/op	       3 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/slicelru-4096-6  	 3066390	       382 ns/op	       3 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/slicelru-8192-6  	 1279915	       916 ns/op	       3 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/slicelru-16384-6 	  614448	      1935 ns/op	       4 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/slicelru-32768-6 	  259474	      5086 ns/op	       4 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/slicelru-65536-6 	   87037	     18639 ns/op	       5 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/linklistlru-16-6 	41403452	        28.0 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/linklistlru-32-6 	42093510	        28.4 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/linklistlru-64-6 	40447105	        30.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/linklistlru-128-6         	30931218	        36.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/linklistlru-256-6         	20856253	        56.7 ns/op	       1 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/linklistlru-512-6         	18655386	        65.9 ns/op	       2 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/linklistlru-1024-6        	17690965	        70.4 ns/op	       2 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/linklistlru-2048-6        	16641722	        73.2 ns/op	       3 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/linklistlru-4096-6        	14816540	        77.2 ns/op	       3 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/linklistlru-8192-6        	15228046	        78.6 ns/op	       3 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/linklistlru-16384-6       	14517943	        81.6 ns/op	       4 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/linklistlru-32768-6       	13467421	        88.1 ns/op	       4 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/linklistlru-65536-6       	13673259	        91.3 ns/op	       5 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/concurrentlru-16-6        	19020158	        64.6 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/concurrentlru-32-6        	18512718	        64.9 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/concurrentlru-64-6        	17744454	        68.6 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/concurrentlru-128-6       	15837927	        75.7 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/concurrentlru-256-6       	12928614	        93.0 ns/op	       1 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/concurrentlru-512-6       	10951273	       104 ns/op	       2 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/concurrentlru-1024-6      	11524120	       107 ns/op	       2 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/concurrentlru-2048-6      	10874824	       111 ns/op	       3 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/concurrentlru-4096-6      	10565332	       116 ns/op	       3 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/concurrentlru-8192-6      	10541458	       113 ns/op	       3 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/concurrentlru-16384-6     	10195915	       124 ns/op	       4 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/concurrentlru-32768-6     	 9366962	       123 ns/op	       4 B/op	       0 allocs/op
+BenchmarkLRU_GetInLRU/concurrentlru-65536-6     	 9326934	       127 ns/op	       5 B/op	       0 allocs/op
+BenchmarkLRU_GetNotInLRU/slicelru-16-6          	28221348	        41.5 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetNotInLRU/slicelru-32-6          	11541640	       103 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetNotInLRU/slicelru-64-6          	 8040009	       150 ns/op	       1 B/op	       0 allocs/op
+BenchmarkLRU_GetNotInLRU/slicelru-128-6         	 6151725	       193 ns/op	       3 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/slicelru-256-6         	 1921448	       614 ns/op	       3 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/slicelru-512-6         	  832542	      1432 ns/op	       3 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/slicelru-1024-6        	 1423015	       841 ns/op	       4 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/slicelru-2048-6        	  282103	      4385 ns/op	       4 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/slicelru-4096-6        	  101732	     11615 ns/op	       4 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/slicelru-8192-6        	   84844	     12161 ns/op	       5 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/slicelru-16384-6       	   35986	     33428 ns/op	       5 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/slicelru-32768-6       	   12883	     92482 ns/op	       5 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/slicelru-65536-6       	    5787	    208619 ns/op	       5 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/linklistlru-16-6       	46028215	        26.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetNotInLRU/linklistlru-32-6       	47894204	        25.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetNotInLRU/linklistlru-64-6       	34332682	        35.3 ns/op	       1 B/op	       0 allocs/op
+BenchmarkLRU_GetNotInLRU/linklistlru-128-6      	19903117	        61.3 ns/op	       3 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/linklistlru-256-6      	17430454	        70.0 ns/op	       3 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/linklistlru-512-6      	17259165	        71.4 ns/op	       3 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/linklistlru-1024-6     	23278832	        50.4 ns/op	       4 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/linklistlru-2048-6     	15904275	        73.3 ns/op	       4 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/linklistlru-4096-6     	15671598	        77.5 ns/op	       4 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/linklistlru-8192-6     	18834996	        63.4 ns/op	       5 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/linklistlru-16384-6    	14123008	        84.7 ns/op	       5 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/linklistlru-32768-6    	13308858	        94.7 ns/op	       5 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/linklistlru-65536-6    	15231090	        75.5 ns/op	       6 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/concurrentlru-16-6     	17643460	        66.1 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetNotInLRU/concurrentlru-32-6     	17087160	        69.5 ns/op	       0 B/op	       0 allocs/op
+BenchmarkLRU_GetNotInLRU/concurrentlru-64-6     	15926313	        75.7 ns/op	       1 B/op	       0 allocs/op
+BenchmarkLRU_GetNotInLRU/concurrentlru-128-6    	12501322	        95.9 ns/op	       3 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/concurrentlru-256-6    	11183352	       107 ns/op	       3 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/concurrentlru-512-6    	11074348	       107 ns/op	       3 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/concurrentlru-1024-6   	13076769	        90.5 ns/op	       4 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/concurrentlru-2048-6   	10874952	       113 ns/op	       4 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/concurrentlru-4096-6   	10223130	       116 ns/op	       4 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/concurrentlru-8192-6   	12019240	        99.0 ns/op	       5 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/concurrentlru-16384-6  	 9993238	       121 ns/op	       5 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/concurrentlru-32768-6  	 9420012	       128 ns/op	       5 B/op	       1 allocs/op
+BenchmarkLRU_GetNotInLRU/concurrentlru-65536-6  	10394613	       112 ns/op	       6 B/op	       1 allocs/op
+PASS
+ok  	github.com/zhangmingkai4315/liblru	192.218s
