@@ -53,6 +53,31 @@ func getTestCases()[]*testCase{
 			data: []string{"key02", "2"},
 			respect: []string{"2","5","4","3"},
 		},
+		{
+			operator:OperatorGet,
+			data: []string{"key03", "3"},
+			respect: []string{"3","2","5","4"},
+		},
+		{
+			operator:OperatorGet,
+			data: []string{"key03", "3"},
+			respect: []string{"3","2","5","4"},
+		},
+		{
+			operator:OperatorGet,
+			data: []string{"key05", "5"},
+			respect: []string{"5","3","2","4"},
+		},
+		{
+			operator:OperatorSet,
+			data: []string{"key05", "update5"},
+			respect: []string{"update5","3","2","4"},
+		},
+		{
+			operator:OperatorSet,
+			data: []string{"key03", "update3"},
+			respect: []string{"update3","update5","2","4"},
+		},
 	}
 }
 

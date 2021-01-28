@@ -25,9 +25,9 @@ func (linklist *DoubleLinkList)Push(node *Node){
 		linklist.head = node
 		linklist.tail = node
 	}else{
-		node.pre = nil
 		linklist.head.pre = node
 		node.next = linklist.head
+		node.pre = nil
 		linklist.head = node
 	}
 	linklist.size++
@@ -56,9 +56,15 @@ func (linklist *DoubleLinkList)Remove(node *Node){
 	}else{
 		if node.pre != nil{
 			node.pre.next = node.next
+		}else{
+			node.next.pre = nil
+			linklist.head = node.next
 		}
 		if node.next != nil{
 			node.next.pre = node.pre
+		}else{
+			node.pre.next = nil
+			linklist.tail = node.pre
 		}
 	}
 	linklist.size --
