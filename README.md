@@ -5,6 +5,15 @@ LRU实现有下面三种方式：
 2. Hash+数组实现   【slicelru】
 3. Hash+双链表+sync.Mutex实现的并发LRU 【concurrentlru】
 
+相关的测试图表
+
+![](./images/set.png)
+![](./images/get-in-lru.png)
+![](./images/get-not-inlru.png)
+
+
+
+
 相关的测试数据:
 
 ```
